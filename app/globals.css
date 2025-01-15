@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -100,4 +104,39 @@ body {
   opacity: 1; 
   transform: translateY(-25%) rotate(-6deg);
   /* color: #0f0316; */
+  animation: criss-cross 2s infinite alternate;
+}
+
+@keyframes criss-cross {
+  0% {
+    transform: translate(-10px, -10px) rotate(0deg);
+    /* text-shadow: 0 0 6px #b43cff, 0 0 12px #b43cff, 0 0 16px #b43cff; */
+  }
+  25% {
+    transform: translate(10px, -10px) rotate(5deg);
+    /* text-shadow: 0 0 8px #d66bff, 0 0 14px #d66bff, 0 0 18px #d66bff; */
+  }
+  50% {
+    transform: translate(10px, 10px) rotate(-5deg);
+    /* text-shadow: 0 0 10px #a033cc, 0 0 16px #a033cc, 0 0 20px #a033cc; */
+  }
+  75% {
+    transform: translate(-10px, 10px) rotate(-10deg);
+    /* text-shadow: 0 0 12px #c85fff, 0 0 18px #c85fff, 0 0 22px #c85fff; */
+  }
+  100% {
+    transform: translate(-10px, -10px) rotate(0deg);
+    /* text-shadow: 0 0 6px #b43cff, 0 0 14px #b43cff, 0 0 18px #b43cff; */
+  }
+}
+
+/* GOOGLE SIGN-IN BUTTON CONFIGURATION */
+.cl-internal-bjylev[data-variant="outline"]{
+  background: white;
+  color: black;
+}
+
+/* REMOVING THE CLERK BUTTON */
+.cl-internal-1hp5nqm, .cl-internal-1dauvpw, .cl-internal-19fsg97 > :not(:first-of-type){
+  display: none;
 }

@@ -54,12 +54,12 @@ export default function Home() {
         </p>
         <p className="text-xl mb-12 max-w-2xl mx-auto"></p>
         <Link href="/onboarding">
-          <Button size="lg" className="mr-4">
+          <Button size="lg" className="mr-4 transform transition duration-500 hover:scale-110">
             Get Started <ArrowRight size={18} className="ml-1" />
           </Button>
         </Link>
         <Link href="#features">
-          <Button size="lg" variant="secondary">
+          <Button size="lg" variant="secondary" className="transform transition duration-500 hover:scale-110">
             Learn More
           </Button>
         </Link>
@@ -71,7 +71,7 @@ export default function Home() {
           <h3 className="text-4xl font-bold mb-12 text-center">Key Features</h3>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <Card key={index} className="bg-gray-800">
+              <Card key={index} className="bg-gray-800 transform transition duration-500 hover:scale-110">
                 <CardContent className="pt-6">
                   <feature.icon className="h-12 w-12 mb-4 text-[#b43cff]" />
                   <h4 className="text-xl font-semibold mb-2">
