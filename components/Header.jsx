@@ -3,9 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "./ui/button";
 import { PenBox } from "lucide-react";
-import { Github } from "lucide-react";
 import UserProfile from "@/components/UserProfile";
 import { checkUser } from "@/lib/checkUser";
+import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
 const Header = async() => {
   await checkUser();
@@ -28,15 +28,16 @@ const Header = async() => {
             passHref
             target="_blank"
             rel="noreferrer"
+            className="hidden XS:inline"
           >
             <Button variant="outline" size="icon">
-              <Github className="!h-7 !w-7" />
+              <GitHubLogoIcon className="!h-7 !w-7" />
             </Button>
           </Link>
           <Link href="/project/create">
-            <Button variant="destructive">
+            <Button variant="destructive" className="xs: px-[0.7rem]">
               <PenBox size={18} />
-              <span>Create Project</span>
+              <span className="hidden xs:inline">Create Project</span>
             </Button>
           </Link>
           <SignedOut>

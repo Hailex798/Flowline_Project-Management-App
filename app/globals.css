@@ -76,7 +76,7 @@ body {
 }
 
 ::selection {
-  background-color: #fffb00; /* Change this to your desired color */
+  background-color: #ffffff; /* Change this to your desired color */
   color: #9900ff; /* Optional: Change text color when selected */
 }
 
@@ -139,4 +139,31 @@ body {
 /* REMOVING THE CLERK BUTTON */
 .cl-internal-1hp5nqm, .cl-internal-1dauvpw, .cl-internal-19fsg97 > :not(:first-of-type){
   display: none;
+}
+
+/* CREATE BUTTON  */
+.bg-destructive {
+  /* background-color: #b43cff; */
+  /* background-color: #6b30c0; */
+  background-color: #9a2ee6;
+  transition: box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out;
+  font-weight: 600;
+}
+/* Use a more specific selector */
+.bg-destructive.bg-destructive:hover {
+  background-color: #7a1fc2;
+  box-shadow: 0 0 15px #b43cff;
+  transform: scale(1.025);
+}
+
+/* CARD 3-D SCROLL EFFECT */
+.card-wrapper {
+  perspective: 1000px;
+}
+
+.card {
+  /* transform: rotateX(20deg) scale(0.9) translateY(-50); */
+  transform: rotateX(15deg) scale(1);
+  transition: transform 0.5s ease-out;
+  will-change: transform;
 }

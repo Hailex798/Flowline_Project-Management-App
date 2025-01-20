@@ -5,6 +5,8 @@ import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { dark, neobrutalism, shadesOfPurple } from "@clerk/themes";
+import UserLoading from "@/components/UserLoading";
+import { Toaster } from "sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -36,16 +38,13 @@ export default function RootLayout({ children }) {
       <html lang="en">
         <body className={`${inter.className} dotted-bg`}>
           <ThemeProvider attribute="class" defaultTheme="dark">
+            <UserLoading />
             {/* HEADER OF THE WEBPAGE -> */}
             <Header />
             <main className="min-h-screen">{children}</main>
+            <Toaster richColors />
             {/* FOOTER OF THE WEBPAGE -> */}
             <Footer />
-            {/* <footer className="bg-[#0f0316] py-6">
-              <div className="container mx-auto text-md text-center">
-                <p>Made by Kshitij Singh Bisht (Hailex)😁</p>
-              </div>
-            </footer> */}
           </ThemeProvider>
         </body>
       </html>
